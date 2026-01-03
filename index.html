@@ -72,6 +72,7 @@
               </p>
             </div>
             <img
+              class="baker-photo"
               src="./images/baker-man.jpg"
               alt="Чоловік пекар дивиться на батони з посмішкою"
             />
@@ -80,14 +81,14 @@
       </section>
       <section class="section" id="chefs-section">
         <div class="container">
-          <h2 class="chefs-section-title section-title">
-            Наші найкращі<br />
-            <span class="accent">шеф-кухарі</span>
+          <h2 class="chefs-section-title section-title centered">
+            Наші найкращі <span class="accent">шеф-кухарі</span>
           </h2>
           <ul class="chef-container">
             <li>
               <article class="chef-container">
                 <img
+                  class="chef-photo"
                   src="./images/nastya-chef.jpg"
                   alt="Пекар Настя показує свої вироби"
                 />
@@ -108,6 +109,7 @@
             <li>
               <article class="chef-container">
                 <img
+                  class="chef-photo"
                   src="./images/vlad-chef.jpg"
                   alt="Пекар Влад займається приготуванням начинки"
                 />
@@ -128,7 +130,7 @@
       </section>
       <section class="section" id="formats-section">
         <div class="container">
-          <h2 class="formats-section-title section-title">Формати</h2>
+          <h2 class="formats-section-title section-title centered">Формати</h2>
           <ul class="formats-list">
             <li class="formats-item">
               <article class="format-card">
@@ -151,17 +153,6 @@
                   <p>Площа: до 25 м2</p>
                   <p>Меню: найпопулярніші позиції меню</p>
                   <p>Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря</p>
-                  <p>Посадкові місця: відсутні</p>
-                </div>
-              </article>
-            </li>
-            <li class="formats-item">
-              <article class="format-card">
-                <h3 class="format-title" lang="en">Handlebar</h3>
-                <div class="format-text">
-                  <p>Площа: до 15 м2</p>
-                  <p>Меню: найпопулярніші позиції меню</p>
-                  <p>Штат: 1 продавець, 1 пекар, 1 помічник пекаря</p>
                   <p>Посадкові місця: відсутні</p>
                 </div>
               </article>
@@ -235,9 +226,12 @@
             <div class="contact-section-item">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.1636304416443!2d30.48869301290578!3d50.45667757147484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637c006b2d%3A0xaf86385f19996ff0!2z0YPQuy4g0KHQtdGH0LXQstGL0YUg0KHRgtGA0LXQu9GM0YbQvtCyLCA1NCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1762884317088!5m2!1sru!2sua"
-                width="100%"
+                width="603"
                 height="595"
-                style="border: 0"
+                style="
+                  border: 1px solid var(--color-secondary-dark);
+                  border-radius: 16px;
+                "
                 allowfullscreen=""
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
