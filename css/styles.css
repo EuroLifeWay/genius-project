@@ -66,7 +66,8 @@ p {
   margin-top: 0;
 }
 
-ul {
+ul,
+ol {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -90,6 +91,11 @@ html {
 a {
   display: inline-block;
   text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
 }
 
 .visually-hidden {
@@ -122,6 +128,7 @@ a {
   border: 2px solid var(--color-brand-normal);
   border-radius: 8px;
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .button:hover {
@@ -133,6 +140,7 @@ a {
 .link {
   color: var(--color-primery-light);
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -154,7 +162,11 @@ a {
 /* Header */
 .header {
   padding-top: 32px;
-  background-color: lightgray; /* remove */
+  /* background-color: lightgray; /* remove */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 
 .header-container {
@@ -261,16 +273,25 @@ a {
 
 /* Chefs Section */
 .chefs-section-title {
-  max-width: 520px;
-  margin: 0 auto 80px;
+  position: relative;
+  margin-bottom: 80px;
 }
 
 .chefs-section-title::before,
 .chefs-section-title::after {
-  display: block;
+  position: absolute;
+  bottom: 24px;
   content: '';
   width: 352px;
   border: 2px solid var(--color-brand-light);
+}
+
+.chefs-section-title::before {
+  left: 0;
+}
+
+.chefs-section-title::after {
+  right: 0;
 }
 
 .chef-photo {
@@ -346,8 +367,13 @@ a {
   background-image: url('../images/walrus-format.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  border: 2px solid gray; /* remove */
+  /* border: 2px solid gray; /* remove */
   border-radius: 16px;
+  transition: transform 0.3s;
+}
+
+.format-card:hover {
+  transform: scale(1.05);
 }
 
 .format-title {
@@ -475,12 +501,36 @@ input:hover::placeholder {
 
 /* Footer Section */
 .footer {
+  position: relative;
   padding: 32px 0;
   background-image: url('../images/footer-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: var(--color-primery-dark);
+}
+
+.footer::before,
+.footer::after {
+  position: absolute;
+  bottom: 0;
+}
+
+.footer::before {
+  left: 0;
+  width: 180px;
+  height: 122px;
+  background-image: url('../images/decor-bread-small.png');
+  background-repeat: no-repeat;
+  content: '';
+}
+
+.footer::after {
+  right: 0;
+  width: 380px;
+  height: 190px;
+  background-image: url('../images/decor-bread-large.png');
+  content: '';
 }
 
 .footer-container {
@@ -509,6 +559,7 @@ input:hover::placeholder {
 
 .footer-nav-link {
   color: var(--color-primery-light);
+  transition: color 0.2s;
 }
 
 .footer-nav-link:hover {
@@ -530,6 +581,7 @@ input:hover::placeholder {
   color: var(--color-primery-light);
   font-size: 16px;
   font-weight: 300;
+  transition: color 0.2s;
 }
 
 .address-link:hover {
@@ -546,6 +598,7 @@ input:hover::placeholder {
 .address-icon {
   fill: var(--color-primery-light);
   /* stroke: red; */
+  transition: color 0.2s;
 }
 
 .address-icon:hover {
@@ -555,4 +608,42 @@ input:hover::placeholder {
 .address-copyright {
   color: #a18268;
   font-size: 14px;
+}
+
+/* Modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.backdrop.is-hidden {
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
+  background-color: var(--color-primery-light);
+  border-radius: 32px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 40px;
+  right: 40px;
 }
