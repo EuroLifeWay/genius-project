@@ -192,11 +192,16 @@ button {
 /* Hero Section */
 .hero-section {
   padding: 272px 0;
-  background-image: url('../images/hero-section-bg.jpg');
+  background-image: linear-gradient(
+      127deg,
+      rgba(18, 18, 17, 0.78) 0%,
+      rgba(18, 18, 17, 0.6) 63.89%,
+      rgba(18, 18, 17, 0) 100%
+    ),
+    url('../images/hero-section-bg.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-  /* background: url(../images/hero-section-bg.jpg) no-repeat center top/cover;  */
 }
 
 .hero-title {
