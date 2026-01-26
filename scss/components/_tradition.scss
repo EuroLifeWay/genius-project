@@ -1,0 +1,34 @@
+.traditions-section {
+    padding-top: 96px;
+}
+
+.traditions-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 32px;
+}
+
+.traditions-content {
+    max-width: 710px;
+}
+
+.traditions-section-title {
+    margin-bottom: 42px;
+}
+
+.traditions-text .uppercase {
+    text-transform: uppercase;
+}
+
+.traditions-text .brand {
+    color: var(--color-brand-normal);
+    font-weight: 600;
+}
+
+.traditions-text.limited-width {
+    max-width: 340px;
+}
+
+.baker-photo {
+    border-radius: 233px 233px 0 0;
+}

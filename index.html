@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="uk">
   <head>
     <meta charset="UTF-8" />
@@ -12,7 +12,7 @@
       rel="stylesheet"
     /> -->
     <!-- Styles -->
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -146,7 +146,7 @@
             </button>
             <ul class="formats-list">
               <li class="formats-item">
-                <article class="format-card">
+                <article class="format-card walrus">
                   <h3 class="format-title" lang="en">Walrus</h3>
                   <div class="format-text">
                     <p>Площа: до 120 м2</p>
@@ -160,7 +160,7 @@
                 </article>
               </li>
               <li class="formats-item">
-                <article class="format-card">
+                <article class="format-card horseshoe">
                   <h3 class="format-title" lang="en">Horseshoe</h3>
                   <div class="format-text">
                     <p>Площа: до 25 м2</p>
@@ -171,7 +171,7 @@
                 </article>
               </li>
               <li class="formats-item">
-                <article class="format-card">
+                <article class="format-card handlebar">
                   <h3 class="format-title" lang="en">Handlebar</h3>
                   <div class="format-text">
                     <p>Площа: до 15 м2</p>
@@ -200,45 +200,52 @@
               <p class="contacts-section-subtitle">
                 Заповни форму, щоб ми звʼязались з тобою!
               </p>
-              <form class="contact-form" action="#" method="post">
-                <!-- <div class="input-group"> -->
-                <label class="contact-form-label" for="full-name">
+              <form class="form" action="#" method="post">
+                <div class="form-field">
                   <input
-                    class="contact-form-input"
+                    class="form-input"
                     type="text"
-                    id="full-name"
-                    name="full-name"
-                    placeholder="Ім‘я"
+                    id="user-name"
+                    name="user-name"
+                    pattern="^(?=(?:[^'\-]*['\-]){0,1}[^'\-]*\s)(?=.*\s(?:[^'\-]*['\-]){0,1}[^'\-]*$)[\p{L}][\p{L}\-']{0,10}[\p{L}]\s[\p{L}][\p{L}\-']{0,10}[\p{L}]$"
                     required
                   />
-                  <!-- </div> -->
-                </label>
-                <label class="contact-form-label" for="phone-number">
+                  <label class="form-lable" for="user-name">Ім‘я</label>
+                </div>
+                <div class="form-field">
+                  <label class="form-lable visually-hidden" for="user-tel"
+                    >Телефон</label
+                  >
                   <input
-                    class="contact-form-input"
+                    class="form-input"
                     type="tel"
-                    id="phone-number"
-                    name="phone-number"
+                    id="user-tel"
+                    name="user-tel"
                     placeholder="Телефон"
+                    pattern="^\+380[0-9]{9}$"
                     required
                   />
-                </label>
-                <label class="contact-form-label" for="email-address">
+                </div>
+                <div class="form-field">
+                  <label class="form-lable visually-hidden" for="user-email"
+                    >Електронна пошта</label
+                  >
                   <input
-                    class="contact-form-input"
+                    class="form-input"
                     type="email"
-                    id="email-address"
-                    name="email-address"
+                    id="user-email"
+                    name="user-email"
                     placeholder="Електронна пошта"
+                    pattern="^[a-zA-Z0-9._%+\-]{2,20}@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,20}$"
                     required
                   />
-                </label>
+                </div>
                 <button class="button contact-form-button" type="submit">
                   Замовити дзвінок
                 </button>
-                <p class="contact-form-pryvacy">
+                <p class="form-pryvacy centered">
                   Натискаючи на кнопку я погоджуюсь з<br />
-                  <a class="contact-form-pryvacy-link" href="#"
+                  <a class="form-pryvacy-link" href="#"
                     >політикою конфіденційності</a
                   >
                 </p>
@@ -333,7 +340,65 @@
 
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">Close</button>
+        <button class="modal-btn-close" type="button">
+          <svg width="32" height="32">
+            <use href="./images/icons.svg#icon-x"></use>
+          </svg>
+        </button>
+        <h2 class="section-title centered">Замовити дзвінок</h2>
+        <p class="contacts-section-subtitle centered">
+          Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
+        </p>
+        <form class="form" name="modal-form">
+          <!-- autocomplete="off" novalidate -->
+          <div class="form-field">
+            <input
+              class="form-input"
+              type="text"
+              id="user-name"
+              name="user-name"
+              pattern="^(?=(?:[^'\-]*['\-]){0,1}[^'\-]*\s)(?=.*\s(?:[^'\-]*['\-]){0,1}[^'\-]*$)[\p{L}][\p{L}\-']{0,10}[\p{L}]\s[\p{L}][\p{L}\-']{0,10}[\p{L}]$"
+              required
+            />
+            <label class="form-lable" for="user-name">Ім‘я</label>
+          </div>
+          <div class="form-field">
+            <label class="form-lable visually-hidden" for="user-tel"
+              >Телефон</label
+            >
+            <input
+              class="form-input"
+              type="tel"
+              id="user-tel"
+              name="user-tel"
+              placeholder="Телефон"
+              pattern="^\+380[0-9]{9}$"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <label class="form-lable visually-hidden" for="user-email"
+              >Електронна пошта</label
+            >
+            <input
+              class="form-input"
+              type="email"
+              id="user-email"
+              name="user-email"
+              placeholder="Електронна пошта"
+              pattern="^[a-zA-Z0-9._%+\-]{2,20}@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,20}$"
+              required
+            />
+          </div>
+
+          <button class="button form-button" type="submit">
+            Замовити дзвінок
+          </button>
+          <p class="form-pryvacy centered">
+            Натискаючи на кнопку я погоджуюсь з<br />
+            <a class="form-pryvacy-link" href="#">політикою конфіденційності</a>
+          </p>
+        </form>
       </div>
     </div>
 
