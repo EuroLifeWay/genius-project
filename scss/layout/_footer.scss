@@ -1,109 +1,106 @@
 .footer {
-    position: relative;
-    padding: 32px 0;
-    background-image: url('../images/footer-bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: var(--color-primery-dark);
-}
+  position: relative;
+  padding: 32px 0;
+  background-image: url('../images/footer-bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--color-primery-dark);
 
-.footer::before,
-.footer::after {
+  &::before,
+  &::after {
     position: absolute;
     bottom: 0;
-}
+  }
 
-.footer::before {
+  &::before {
     left: 0;
     width: 180px;
     height: 122px;
     background-image: url('../images/decor-bread-small.png');
     background-repeat: no-repeat;
     content: '';
-}
+  }
 
-.footer::after {
+  &::after {
     right: 0;
     width: 380px;
     height: 190px;
     background-image: url('../images/decor-bread-large.png');
     content: '';
-}
+  }
 
-.footer-container {
+  &__container {
     display: flex;
     gap: 20px;
-}
+  }
 
-.footer-nav,
-.footer-address {
+  &__nav,
+  &__address {
     display: flex;
     flex-basis: 50%;
     gap: 20px;
-}
+  }
 
-.footer-logo {
+  &__logo {
     /* flex-basis: 50%; */
     flex-grow: 1;
-}
+  }
 
-.footer-menu {
+  &__menu {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     gap: 16px;
-}
+  }
 
-.footer-nav-link {
+  &__nav-link {
     color: var(--color-primery-light);
     transition: color 0.2s;
-}
+    &:hover {
+      color: var(--color-brand-normal);
+    }
+  }
 
-.footer-nav-link:hover {
-    color: var(--color-brand-normal);
-}
-
-.footer-address {
+  &__address {
     justify-content: space-between;
-}
+  }
 
-.address-list,
-.address-copyright {
+  &__address-list,
+  &__address-copyright {
     display: flex;
     flex-direction: column;
     gap: 16px;
-}
+  }
 
-.address-link {
+  &__address-link {
     color: var(--color-primery-light);
     font-size: 16px;
     font-weight: 300;
     transition: color 0.2s;
-}
+    &:hover {
+      color: var(--color-brand-normal);
+    }
+  }
 
-.address-link:hover {
-    color: var(--color-brand-normal);
-}
-
-.address-icon-list {
+  &__address-icon-list {
     display: flex;
     justify-content: flex-start;
     /* padding-top: 16px; */
     gap: 22px;
-}
+  }
 
-.address-icon {
+  &__address-icon {
     fill: var(--color-primery-light);
     /* stroke: red; */
     transition: color 0.2s;
-}
+    &:hover {
+      fill: var(--color-brand-normal);
+    }
+  }
 
-.address-icon:hover {
-    fill: var(--color-brand-normal);
-}
-
-.address-copyright {
+  &__address-copyright {
     color: #a18268;
     font-size: 14px;
+  }
 }

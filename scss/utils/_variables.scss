@@ -1,14 +1,23 @@
 :root {
-    --color-primery-dark: #31261a;
-    --color-primery-light: #faf4ea;
-    --color-secondary-dark: #a18268;
-    --color-brand-normal: #819b57;
-    --color-brand-dark: #465929;
-    --color-brand-light: #cfcfbc;
-    --bg-image-gradient: linear-gradient(180deg,
-            rgba(49, 38, 26, 0) 55.21%,
-            rgba(49, 38, 26, 0.71) 72.92%,
-            var(--color-primery-dark) 100%);
+  --color-primery-dark: #31261a;
+  --color-primery-light: #faf4ea;
+  --color-secondary-dark: #a18268;
+  --color-brand-normal: #819b57;
+  --color-brand-dark: #465929;
+  --color-brand-light: #cfcfbc;
+  --bg-image-gradient: linear-gradient(
+    180deg,
+    rgba(49, 38, 26, 0) 55.21%,
+    rgba(49, 38, 26, 0.71) 72.92%,
+    var(--color-primery-dark) 100%
+  );
 }
 
 $font-primary: 'Poppins', sans-serif;
+$font-size-desktop: 18px;
+
+$color-primery-light: #faf4ea;
+
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1280px;

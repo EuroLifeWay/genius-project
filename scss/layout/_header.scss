@@ -1,28 +1,63 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 16px;
+
+  @media screen and (min-width: $bp-desktop) {
     padding-top: 32px;
-    /* background-color: lightgray; /* remove */
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-}
+  }
 
-.header-container {
+  &__container {
     display: flex;
     align-items: center;
     gap: 32px;
-}
+  }
 
-.header-nav {
+  &__nav {
     display: flex;
     align-items: center;
     flex-grow: 1;
     gap: 32px;
-}
+  }
 
-.header-nav-list {
-    display: flex;
-    gap: 64px;
-    flex-grow: 1;
-    justify-content: center;
+  &__menu {
+    display: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      gap: 64px;
+      flex-grow: 1;
+      justify-content: flex-end;
+    }
+
+    @media screen and (min-width: $bp-desktop) {
+      display: flex;
+      gap: 64px;
+      flex-grow: 1;
+      justify-content: center;
+    }
+  }
+
+  &__button {
+    display: none;
+
+    @media screen and (min-width: $bp-desktop) {
+      display: block;
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    fill: var(--color-primery-light);
+
+    @media screen and (min-width: $bp-tablet) {
+      display: none;
+    }
+  }
 }

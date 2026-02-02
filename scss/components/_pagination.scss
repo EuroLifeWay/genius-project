@@ -1,0 +1,17 @@
+.pagination {
+  display: none;
+
+  @media screen and (min-width: $bp-tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+
+    &__button {
+      width: 11px;
+      height: 11px;
+      background-color: var(--color-secondary-dark);
+      border-radius: 50%;
+    }
+  }
+}

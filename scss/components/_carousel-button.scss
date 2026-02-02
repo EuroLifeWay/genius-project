@@ -1,4 +1,7 @@
 .carousel-button {
+  display: none;
+
+  @media screen and (min-width: $bp-tablet) {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -11,13 +14,14 @@
     border-radius: 50%;
     border: 1px solid var(--color-primery-dark);
     cursor: pointer;
-}
 
-.carousel-button:hover {
-    fill: var(--color-primery-light);
-    background-color: var(--color-primery-dark);
-}
+    &:hover {
+      fill: var(--color-primery-light);
+      background-color: var(--color-primery-dark);
+    }
 
-.carousel-button.flipped {
-    transform: rotate(180deg);
+    &.flipped {
+      transform: rotate(180deg);
+    }
+  }
 }
