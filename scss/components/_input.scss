@@ -3,25 +3,34 @@
 
   &__lable {
     position: absolute;
-    top: 21px;
-    left: 42px;
-    font-size: 16px;
+    top: 13px;
+    left: 25px;
     line-height: 1.17;
     color: var(--color-secondary-dark);
     transition: transform 0.3s;
     /* display: block; */
+
+    @media screen and (min-width: $bp-tablet) {
+      top: 21px;
+      left: 42px;
+      font-weight: 400;
+    }
   }
 
   &__control {
     font-family: inherit;
     font-size: 16px;
     font-weight: 300;
-    padding: 16px 42px;
+    padding: 8px 24px;
     width: 100%;
     color: var(--color-primery-dark);
     background-color: transparent;
     border: 1px solid var(--color-secondary-dark);
     border-radius: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 42px;
+    }
 
     &:focus,
     &:hover {
@@ -45,6 +54,10 @@
   }
 
   &:focus-within &__lable {
-    transform: translate(-36px, -40px);
+    transform: translate(-24px, -32px);
+
+    @media screen and (min-width: $bp-tablet) {
+      transform: translate(-36px, -40px);
+    }
   }
 }
