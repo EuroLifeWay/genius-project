@@ -1,4 +1,5 @@
 .footer {
+  text-align: center;
   position: relative;
   padding: 32px 0;
   background-image: url('../images/footer-bg-mobile.webp');
@@ -8,16 +9,13 @@
   background-color: var(--color-primery-dark);
 
   @media screen and (min-width: $bp-tablet) {
+    text-align: start;
     background-image: url('../images/footer-bg.png');
   }
 
   &::before,
   &::after {
     position: absolute;
-
-    // @media screen and (min-width: $bp-tablet) {
-    //   bottom: 0;
-    // }
   }
 
   &::before {
@@ -73,16 +71,24 @@
     @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
       flex-basis: 50%;
-      gap: 18px;
     }
   }
 
   &__nav {
     gap: 32px;
+
+    @media screen and (min-width: $bp-tablet) {
+      gap: 18px;
+    }
   }
 
   &__address {
     gap: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      justify-content: space-between;
+      gap: 18px;
+    }
   }
 
   &__logo {
@@ -95,11 +101,6 @@
     flex-direction: column;
     flex-grow: 1;
     gap: 16px;
-    text-align: center;
-
-    @media screen and (min-width: $bp-tablet) {
-      text-align: start;
-    }
   }
 
   &__nav-link {
@@ -110,18 +111,12 @@
     }
   }
 
-  &__address {
-    justify-content: space-between;
-  }
-
   &__address-list,
   &__address-copyright {
     display: flex;
     flex-direction: column;
-    text-align: center;
 
     @media screen and (min-width: $bp-tablet) {
-      text-align: start;
       gap: 16px;
     }
   }
