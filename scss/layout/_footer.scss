@@ -14,9 +14,9 @@
   &::before,
   &::after {
     position: absolute;
-    bottom: 0;
 
     // @media screen and (min-width: $bp-tablet) {
+    //   bottom: 0;
     // }
   }
 
@@ -30,6 +30,8 @@
     content: '';
 
     @media screen and (min-width: $bp-tablet) {
+      top: auto;
+      bottom: 0;
       width: 180px;
       height: 122px;
       background-image: url('../images/decor-bread-small.png');
@@ -38,6 +40,7 @@
 
   &::after {
     right: 0;
+    bottom: 0;
     width: 102px;
     height: 91px;
     background-image: url('../images/decor-bread-mobile-large.webp');
