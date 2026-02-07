@@ -59,6 +59,7 @@
 
     @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
+      align-items: flex-start;
     }
   }
 
@@ -70,6 +71,7 @@
 
     @media screen and (min-width: $bp-tablet) {
       flex-direction: row;
+      align-items: flex-start;
       flex-basis: 50%;
     }
   }
